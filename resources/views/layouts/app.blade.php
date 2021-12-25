@@ -12,7 +12,7 @@
 
     <x-navbar></x-navbar>
 
-    @yield('content')
+    {{ $slot }}
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
