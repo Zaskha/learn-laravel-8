@@ -1,16 +1,11 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Post</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
+@extends('layouts.app', ['title' => 'About Page'])
 
-    @include('layouts.navbar')
+@section('content')
 
-    About
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
-</html>
+<h1>About</h1>
+
+<p>
+    Lorem, ipsum dolor sit <strong style="color: red">amet</strong> consectetur adipisicing elit. Delectus laboriosam facere natus quam exercitationem expedita id, tempora necessitatibus voluptatum quis optio recusandae aliquid dolor suscipit non similique fugiat iure autem.
+</p>
+    
+@endsection
