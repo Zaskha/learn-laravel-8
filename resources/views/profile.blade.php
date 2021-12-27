@@ -1,3 +1,3 @@
-<x-app-layout title="Profile">
-    <h1>Profile</h1>
+<x-app-layout :title="$nama ?? 'Profile'">
+    <h1>{{ $nama ?? 'Profile'}}</h1>
 </x-app-layout>
