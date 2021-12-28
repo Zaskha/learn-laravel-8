@@ -1,17 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 
-Route::get('/', fn() => view('home')); // format routing ini hanya berjalan di php 7.4 dan keatas
-Route::view('contact', 'contact');
-Route::view('about', 'about');
-
-Route::get('profile/{username}/{post}', function($username) {
-    // $name = $request->get('nama');
-
-
-
-    // $name = $request->nama;
-    return view('profile', ['nama' => $username]);
-});
+Route::get('/', HomeController::class);
+Route::get('contact', [ContactController::class, 'create']);
+Route::post('contact', [ContactController::class, 'store']);
